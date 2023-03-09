@@ -2,6 +2,7 @@ import { getContrastYIQ } from "../helpers";
 import MainContext from "../MainContext";
 import { useContext } from "react";
 import ClipboardButton from "react-clipboard.js";
+import { GrCopy } from "react-icons/gr";
 
 function Brand({ brand }) {
   const { selectedBrands, setSelectedBrands } = useContext(MainContext);
@@ -37,7 +38,8 @@ function Brand({ brand }) {
               "--textColor": `${getContrastYIQ(color)}`,
             }}
           >
-            {color}
+            <div className="copy-logo"><GrCopy /></div>
+            <div className="color">{color}</div>
           </ClipboardButton>
         ))}
       </div>
