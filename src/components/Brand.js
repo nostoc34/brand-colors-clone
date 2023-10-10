@@ -13,6 +13,7 @@ function Brand({ brand }) {
       setSelectedBrands(selectedBrands.filter((slug) => slug !== brand.slug));
     } else {
       setSelectedBrands([...selectedBrands, brand.slug]);
+      console.log(setCopied);
     }
   };
 
